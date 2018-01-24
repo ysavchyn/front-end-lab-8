@@ -80,7 +80,7 @@ write your code here
             -moz-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
         }
-        .tm-sidebar {
+        .tm-main-nav {
             -webkit-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
             -moz-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
@@ -91,23 +91,23 @@ write your code here
             border: 2px solid silver;
         }
 
-        /*    ---Task6---    */
-        #tmCarousel h2 {
+        /*    ---Task6---   до всіх тайлів */
+        .carousel-item:first-child h2 {
             color: gainsboro;
             letter-spacing: 5px;
         }
 
         /*    ---Task7---    */
-        h2 + p { 
-            font-style: italic; 
+        h2 + p {
+            font-style: italic;
         }
-        
+
         /*    ---Task8---    */
-        .tm-section-description {
+        div.tm-content-box.flex-2-col p.tm-section-description {
             text-indent: 20px;
-            line-height: 30px;   
+            line-height: 30px;
         }
-        
+
         /*    ---Task9---    */
         section.heading.tm-content-box.pad h2 {
             color: #6dcad7;
@@ -128,7 +128,7 @@ write your code here
         section.heading.tm-content-box.pad ol li a:hover {
             color: #a9e0e6;
         }
-        
+
         /*    ---Task10---    */
         section.blocks ul.boxes.gallery-container li.box:nth-child(odd) {
             background-color: #f2f2f2;
@@ -136,7 +136,7 @@ write your code here
         ul.boxes.gallery-container li.box p::first-letter {
             color: #413e37;
         }
-        
+
         /*    ---Task11---    */
         li.tm-nav-item:nth-child(-n+3) {
             border-bottom: 1px solid silver;
@@ -144,5 +144,63 @@ write your code here
         .tm-main-nav {
             padding-top: 0px;
             padding-bottom: 0px;
+        }
+
+        /*    ---Task12---    */
+        input[type="text"] {
+            color: red;
+        }
+        button[type="submit"] {
+            color: red;
+        }
+
+        /*    ---Task13---    */
+    }
+
+    @media screen and (max-width: 1140px), (max-height: 835px) {
+        .tm-sidebar {
+            z-index: 5;
+            height: auto;
+            width: auto;
+        }
+        .tm-nav-item {
+            width: auto;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            display: inline;
+            vertical-align: middle;
+        }
+        nav ul {
+            margin: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 5%;
+            margin-left: 5%; 
+        }
+        .tm-main-content {
+            margin-top: 70px;
+        }
+        nav ul li.tm-nav-item:nth-child(-n+4) {
+            overflow: hidden;
+            border-bottom: 0px;
+        }
+        nav ul li.tm-nav-item {
+            padding: 0px 30px;
+        }
+        .tm-main-content {
+            position: absolute;
+            top: 35%;
+            left: 30%;
+            right: 30%;
+            padding-left: 0;
+            margin: -125px -125px 0 -125px;
         }
     }
