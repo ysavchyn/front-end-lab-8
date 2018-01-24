@@ -17,6 +17,7 @@ write your code here
     @page {
         size: A4;
     }
+
     @media print {
         .tm-sidebar {
             display: none;
@@ -44,7 +45,7 @@ write your code here
         .tm-team-description-container {
             max-width: 90%;
         }
-        .tm-content-box > .flex-item > img {
+        .tm-content-box .flex-item img {
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -59,30 +60,73 @@ write your code here
         }
     }
 
-/*    ---Task2---    */
-li.box{
-    border-width: 0px !important;
-    outline: 1px solid silver;
-    position: relative;
-}
+    @media screen {
+        /*    ---Task2---    */
+        li.box {
+            border-width: 0px !important;
+            outline: 1px solid silver;
+            position: relative;
+        }
 
-/*    ---Task3---    */
-p::first-letter {
-    color: #76cdd7;
-    font-size: 30px;
-}
+        /*    ---Task3---    */
+        p::first-letter {
+            color: #76cdd7;
+            font-size: 30px;
+        }
 
-/*    ---Task4---    */
-.tm-content-box
-{
-    -webkit-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.25);
-    box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.25);
-}
-.tm-sidebar {
-    -webkit-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.25);
-    box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.25);
-}
+        /*    ---Task4---    */
+        .tm-content-box {
+            -webkit-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+        }
+        .tm-sidebar {
+            -webkit-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+        }
 
-/*    ---Task5---    */
+        /*    ---Task5---    */
+        .gallery-container a img {
+            border: 2px solid silver;
+        }
+
+        /*    ---Task6---    */
+        #tmCarousel h2 {
+            color: gainsboro;
+            letter-spacing: 5px;
+        }
+
+        /*    ---Task7---    */
+        h2 + p { 
+            font-style: italic; 
+        }
+        
+        /*    ---Task8---    */
+        .tm-section-description {
+            text-indent: 20px;
+            line-height: 30px;   
+        }
+        
+        /*    ---Task9---    */
+        section.heading.tm-content-box.pad h2 {
+            color: #6dcad7;
+            text-align: center;
+        }
+        section.heading.tm-content-box.pad ol li a {
+            color: #000
+        }
+        section.heading.tm-content-box.pad ol li a:visited {
+            color: silver;
+        }
+        a.text::after {
+            color: red;
+            font-size: 10px;
+            content: "New";
+            vertical-align: super;
+        }
+        section.heading.tm-content-box.pad ol li a:hover {
+            color: #a9e0e6;
+        }
+        /*    ---Task10---    */
+    }
