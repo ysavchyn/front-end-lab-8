@@ -1,0 +1,156 @@
+html {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    background-color: $htmlbackgroundColor;
+    font-family: "Times New Roman", Times, serif;
+    body {
+        height: auto;
+        width: auto;
+        color: $bodytextcolor;
+        max-width: 1100px;
+        background-color: $bodybackgroundColor;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-left: 20px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        form {
+            max-width: 1100px;
+        }
+        div.column {
+            column-count: 2;
+        }
+        input.cell_width {
+            color: #808080;
+            border-color: #D3D3D3;
+            width: 100%;
+            height: 30px;
+            padding-left: 5px;
+            box-sizing: border-box;
+            box-shadow: none;
+            border-style: solid;
+            border-width: 1px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+        textarea {
+            color: #808080;
+            border-color: #D3D3D3;
+            width: 100%;
+            height: 200px;
+            padding-left: 5px;
+            box-sizing: border-box;
+            vertical-align: top;
+            resize: vertical;
+            overflow: auto;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+        .button {
+            position: absolute;
+        }
+        #button {
+            position: relative;
+            cursor: pointer;
+            width: 255px;
+            height: 45px;
+            background-color: transparent;
+            color: $buttoncolor;
+            font-weight: normal;
+            border: 1px $buttoncolor solid;
+            font-size: 125%;
+            margin-bottom: 15px;
+            top: 0px;
+            transition: all ease 0.3s;
+        }
+        #button:active {
+            box-shadow: 0 3px 0 transparent;
+            top: 3px;
+        }
+
+        span {
+            color: $formtextcolor;
+        }
+        div#content {
+            max-width: 100%;
+            width: 100%;
+            box-sizing: content-box;
+            overflow-y: auto;
+            h1 {
+                text-align: center;
+                color: $headingcolor;
+                text-transform: $h1texttransform;
+            }
+            h2 {
+                color: $headingcolor;
+            }
+            img {
+                border: $imgborder;
+                padding: 2px;
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+            img.img-left {
+                float: left;
+                margin: 0 15px 15px 0;
+                max-width: 100%;
+            }
+            img.img-right {
+                float: right;
+                margin: $imgmargintop 0 5px 10px;
+            }
+            @mixin brief($brieffloat, $briefbackgroundcolor, $briefwidth, $briefmarginbottom) {
+                div.brief {
+                    color: #000000;
+                    float: $brieffloat;
+                    background-color: $briefbackgroundcolor;
+                    padding: 15px;
+                    width: $briefwidth;
+                    height: auto;
+                    display: block;
+                    margin: 0 20px $briefmarginbottom 0;
+                }
+            }
+            @include brief($brieffloat, $briefbackgroundcolor, $briefwidth, $briefmarginbottom);
+            a {
+                color: $acolor;
+            }
+            table {
+                border-collapse: collapse;
+                width: 97%;
+                max-width: 1100px;
+                margin-bottom: 50px;
+                caption {
+                    text-align: right;
+                    color: $tcaptioncolor;
+                }
+                tbody {
+                    tr:first-child {
+                        background-color: $theadbackgroundcolor;
+                        th {
+                            color: $theadcolor;
+                            padding: 7px 0 7px 15px;
+                            font-weight: normal;
+                            text-align: left;
+                            text-transform: uppercase;
+                            border-right: 1px solid white;
+                        }
+                        th:last-child {
+                            border-right: none;
+                        }
+                    }
+                    tr:nth-child(n+1) {
+                        td {
+                            border-bottom: $tborder;
+                            padding: 7px 0 7px 15px;
+                            background-color: $tbodybackgroundcolor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
