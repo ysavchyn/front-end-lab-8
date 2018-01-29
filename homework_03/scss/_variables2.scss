@@ -1,19 +1,38 @@
+//html
 $htmlbackgroundColor: #E0F6FD;
+
+//body
 $bodybackgroundColor: #3B3B3B;
-$bodytextcolor: #ffffff;
+$bodytextcolor: white;
+
+//heading
 $headingcolor: #ECC114;
-$imgborder: 2px solid #ECC114;
 $h1texttransform: uppercase;
+
+//table
 $tbodybackgroundcolor: #677D01;
 $theadbackgroundcolor: #94A34E;
-$theadcolor: #000000;
-$tcaptioncolor: #000000;
+$theadcolor: black;
+$tcaptioncolor: black;
 $tborder: 0.5px solid #D3D3D3;
+
+//a
 $acolor: #B29C04;
+$acolorhover: gray;
+$acolorvisited: orange;
+
+//form
 $formtextcolor: #ECC114;
+
+//button
 $buttoncolor: #ECC114;
+
+//.brief
 $briefbackgroundcolor: #FFF178;
 $brieffloat: none;
 $briefwidth: 97%;
-$imgmargintop: 5px;
 $briefmarginbottom: 45px;
+
+//img
+$imgmargintop: 5px;
+$imgborder: 2px solid #ECC114;

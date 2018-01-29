@@ -1,155 +1,146 @@
+@mixin margin-padding($mtop, $mright, $mbottom, $mleft, $ptop, $pright, $pbottom, $pleft) {
+    margin: $mtop $mright $mbottom $mleft;
+    padding: $ptop $pright $pbottom $pleft;
+}
+
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
 html {
-    height: auto;
-    width: auto;
-    max-height: 100%;
     background-color: $htmlbackgroundColor;
     font-family: "Times New Roman", Times, serif;
     body {
-        height: auto;
-        width: auto;
+        @include margin-padding(10px, 15%, 10px, 15%, 10px, 30px, 20px, 20px);
+        @include width-height(auto, auto);
         color: $bodytextcolor;
         max-width: 1100px;
         background-color: $bodybackgroundColor;
-        margin-left: 15%;
-        margin-right: 15%;
-        padding-left: 20px;
-        padding-right: 30px;
-        padding-bottom: 20px;
-        padding-top: 10px;
-        form {
-            max-width: 1100px;
-        }
-        div.column {
-            column-count: 2;
-        }
-        input.cell_width {
-            color: #808080;
-            border-color: #D3D3D3;
-            width: 100%;
-            height: 30px;
-            padding-left: 5px;
-            box-sizing: border-box;
-            box-shadow: none;
-            border-style: solid;
-            border-width: 1px;
-            margin-bottom: 15px;
-            margin-top: 5px;
-        }
-        textarea {
-            color: #808080;
-            border-color: #D3D3D3;
-            width: 100%;
-            height: 200px;
-            padding-left: 5px;
-            box-sizing: border-box;
-            vertical-align: top;
-            resize: vertical;
-            overflow: auto;
-            margin-bottom: 20px;
-            margin-top: 5px;
-        }
-        #button {
-            position: relative;
-            cursor: pointer;
-            width: 255px;
-            height: 45px;
-            background-color: transparent;
-            color: $buttoncolor;
-            font-weight: normal;
-            border: 1px $buttoncolor solid;
-            font-size: 125%;
-            margin-bottom: 15px;
-            top: 0px;
-            transition: all ease 0.3s;
-            &:active {
-                box-shadow: 0 3px 0 transparent;
-                top: 3px;
+        div {
+            &.column {
+                column-count: 2;
             }
-        }
-        span {
-            color: $formtextcolor;
-        }
-        div#content {
-            max-width: 100%;
-            width: 100%;
-            box-sizing: content-box;
-            overflow-y: auto;
-            h1 {
-                text-align: center;
-                color: $headingcolor;
-                text-transform: $h1texttransform;
-            }
-            h2 {
-                color: $headingcolor;
-            }
-            img {
-                border: $imgborder;
-                padding: 2px;
-                max-width: 100%;
-                height: auto;
-                display: block;
-                &.img-left {
-                    float: left;
-                    margin: 0 15px 15px 0;
-                    max-width: 100%;
+            &#content {
+                @include width-height(100%, auto);
+                box-sizing: content-box;
+                overflow-y: hidden;
+                h1 {
+                    color: $headingcolor;
+                    text-align: center;
+                    text-transform: $h1texttransform;
                 }
-                &.img-right {
-                    float: right;
-                    margin: $imgmargintop 0 5px 10px;
+                h2 {
+                    color: $headingcolor;
                 }
-            }
-
-            @mixin brief($brieffloat, $briefbackgroundcolor, $briefwidth, $briefmarginbottom) {
+                img {
+                    @include margin-padding(null, null, null, null, 2px, 2px, 2px, 2px);
+                    @include width-height(auto, auto);
+                    display: block;
+                    border: $imgborder;
+                    &.img-left {
+                        @include margin-padding(0, 15px, 15px, 0, null, null, null, null);
+                        float: left;
+                    }
+                    &.img-right {
+                        @include margin-padding($imgmargintop, 0, 5px, 10px, null, null, null, null);
+                        float: right;
+                    }
+                }
                 div.brief {
-                    color: #000000;
+                    @include margin-padding(0, 20px, $briefmarginbottom, 0, 15px, 15px, 15px, 15px);
+                    @include width-height($briefwidth, auto);
+                    color: black;
                     float: $brieffloat;
                     background-color: $briefbackgroundcolor;
-                    padding: 15px;
-                    width: $briefwidth;
-                    height: auto;
                     display: block;
-                    margin: 0 20px $briefmarginbottom 0;
                 }
-            }
-            @include brief($brieffloat, $briefbackgroundcolor, $briefwidth, $briefmarginbottom);
-            a {
-                color: $acolor;
-            }
-            table {
-                border-collapse: collapse;
-                width: 97%;
-                max-width: 1100px;
-                margin-bottom: 50px;
-                caption {
-                    text-align: right;
-                    color: $tcaptioncolor;
+                a {
+                    color: $acolor;
+                    &:hover {
+                        color: $acolorhover;
+                    }
+                    &:visited {
+                        color: $acolorvisited;
+                    }
                 }
-                tbody {
-                    tr {
-                        &:first-child {
-                            background-color: $theadbackgroundcolor;
-                            th {
-                                color: $theadcolor;
-                                padding: 7px 0 7px 15px;
-                                font-weight: normal;
-                                text-align: left;
-                                text-transform: uppercase;
-                                border-right: 1px solid white;
-                                &:last-child {
-                                    border-right: none;
+                table {
+                    @include margin-padding(0, 0, 50px, 0, null, null, null, null);
+                    @include width-height(97%, auto);
+                    border-collapse: collapse;
+                    caption {
+                        color: $tcaptioncolor;
+                        text-align: right;
+                    }
+                    tbody {
+                        tr {
+                            &:first-child {
+                                background-color: $theadbackgroundcolor;
+                                th {
+                                    @include margin-padding(null, null, null, null, 7px, 0, 7px, 15px);
+                                    color: $theadcolor;
+                                    font-weight: normal;
+                                    text-align: left;
+                                    text-transform: uppercase;
+                                    border-right: 1px solid white;
+                                    &:last-child {
+                                        border-right: none;
+                                    }
                                 }
                             }
-                        }
-                        &:nth-child(n+1) {
-                            td {
-                                border-bottom: $tborder;
-                                padding: 7px 0 7px 15px;
-                                background-color: $tbodybackgroundcolor;
+                            &:nth-child(n+1) {
+                                td {
+                                    @include margin-padding(null, null, null, null, 7px, 0, 7px, 15px);
+                                    background-color: $tbodybackgroundcolor;
+                                    border-bottom: $tborder;
+                                }
                             }
                         }
                     }
                 }
             }
+        }
+        input {
+            &.cell_width {
+                @include margin-padding(5px, 0, 15px, 0, 0, 0, 0, 5px);
+                @include width-height(100%, 30px);
+                color: #808080;
+                border: 1px solid #D3D3D3;
+                box-sizing: border-box;
+                box-shadow: none;
+            }
+        }
+        textarea {
+            @include margin-padding(5px, 0, 20px, 0, 0, 0, 0, 5px);
+            @include width-height(100%, 200px);
+            color: #808080;
+            border-color: #D3D3D3;
+            box-sizing: border-box;
+            vertical-align: top;
+            resize: vertical;
+        }
+        #button {
+            @include margin-padding(0, 0, 15px, 0, null, null, null, null);
+            @include width-height(255px, 45px);
+            position: relative;
+            background-color: transparent;
+            font-size: 125%;
+            font-weight: normal;
+            color: $buttoncolor;
+            cursor: pointer;
+            border: 1px $buttoncolor solid;
+            transition: all ease 0.2s;
+            &:hover {
+                border: 3px $buttoncolor solid;
+                font-weight: bold;
+            }
+            &:active {
+                top: 3px;
+                box-shadow: 0 3px 0 transparent;
+            }
+        }
+        span {
+            color: $formtextcolor;
         }
     }
 }
