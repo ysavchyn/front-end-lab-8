@@ -48,9 +48,6 @@ html {
             margin-bottom: 20px;
             margin-top: 5px;
         }
-        .button {
-            position: absolute;
-        }
         #button {
             position: relative;
             cursor: pointer;
@@ -64,12 +61,11 @@ html {
             margin-bottom: 15px;
             top: 0px;
             transition: all ease 0.3s;
+            &:active {
+                box-shadow: 0 3px 0 transparent;
+                top: 3px;
+            }
         }
-        #button:active {
-            box-shadow: 0 3px 0 transparent;
-            top: 3px;
-        }
-
         span {
             color: $formtextcolor;
         }
@@ -92,16 +88,17 @@ html {
                 max-width: 100%;
                 height: auto;
                 display: block;
+                &.img-left {
+                    float: left;
+                    margin: 0 15px 15px 0;
+                    max-width: 100%;
+                }
+                &.img-right {
+                    float: right;
+                    margin: $imgmargintop 0 5px 10px;
+                }
             }
-            img.img-left {
-                float: left;
-                margin: 0 15px 15px 0;
-                max-width: 100%;
-            }
-            img.img-right {
-                float: right;
-                margin: $imgmargintop 0 5px 10px;
-            }
+
             @mixin brief($brieffloat, $briefbackgroundcolor, $briefwidth, $briefmarginbottom) {
                 div.brief {
                     color: #000000;
@@ -128,25 +125,27 @@ html {
                     color: $tcaptioncolor;
                 }
                 tbody {
-                    tr:first-child {
-                        background-color: $theadbackgroundcolor;
-                        th {
-                            color: $theadcolor;
-                            padding: 7px 0 7px 15px;
-                            font-weight: normal;
-                            text-align: left;
-                            text-transform: uppercase;
-                            border-right: 1px solid white;
+                    tr {
+                        &:first-child {
+                            background-color: $theadbackgroundcolor;
+                            th {
+                                color: $theadcolor;
+                                padding: 7px 0 7px 15px;
+                                font-weight: normal;
+                                text-align: left;
+                                text-transform: uppercase;
+                                border-right: 1px solid white;
+                                &:last-child {
+                                    border-right: none;
+                                }
+                            }
                         }
-                        th:last-child {
-                            border-right: none;
-                        }
-                    }
-                    tr:nth-child(n+1) {
-                        td {
-                            border-bottom: $tborder;
-                            padding: 7px 0 7px 15px;
-                            background-color: $tbodybackgroundcolor;
+                        &:nth-child(n+1) {
+                            td {
+                                border-bottom: $tborder;
+                                padding: 7px 0 7px 15px;
+                                background-color: $tbodybackgroundcolor;
+                            }
                         }
                     }
                 }

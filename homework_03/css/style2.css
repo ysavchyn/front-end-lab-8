@@ -44,8 +44,6 @@ html {
       overflow: auto;
       margin-bottom: 20px;
       margin-top: 5px; }
-    html body .button {
-      position: absolute; }
     html body #button {
       position: relative;
       cursor: pointer;
@@ -59,9 +57,9 @@ html {
       margin-bottom: 15px;
       top: 0px;
       transition: all ease 0.3s; }
-    html body #button:active {
-      box-shadow: 0 3px 0 transparent;
-      top: 3px; }
+      html body #button:active {
+        box-shadow: 0 3px 0 transparent;
+        top: 3px; }
     html body span {
       color: #ECC114; }
     html body div#content {
@@ -81,13 +79,13 @@ html {
         max-width: 100%;
         height: auto;
         display: block; }
-      html body div#content img.img-left {
-        float: left;
-        margin: 0 15px 15px 0;
-        max-width: 100%; }
-      html body div#content img.img-right {
-        float: right;
-        margin: 5px 0 5px 10px; }
+        html body div#content img.img-left {
+          float: left;
+          margin: 0 15px 15px 0;
+          max-width: 100%; }
+        html body div#content img.img-right {
+          float: right;
+          margin: 5px 0 5px 10px; }
       html body div#content div.brief {
         color: #000000;
         float: none;
@@ -116,8 +114,8 @@ html {
             text-align: left;
             text-transform: uppercase;
             border-right: 1px solid white; }
-          html body div#content table tbody tr:first-child th:last-child {
-            border-right: none; }
+            html body div#content table tbody tr:first-child th:last-child {
+              border-right: none; }
         html body div#content table tbody tr:nth-child(n+1) td {
           border-bottom: 0.5px solid #D3D3D3;
           padding: 7px 0 7px 15px;
