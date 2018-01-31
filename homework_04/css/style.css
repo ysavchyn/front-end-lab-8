@@ -17,44 +17,63 @@ html {
       margin: 0;
       padding: 0; }
       html body .wrapper header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
         min-height: 740px;
         background-image: url(../img/apples.jpg);
         background-size: cover; }
         html body .wrapper header .flex-container {
+          border: 1px solid red;
           padding: 26px 215px;
           display: flex;
           align-items: center;
-          flex-wrap: wrap; }
+          flex-wrap: nowrap; }
           html body .wrapper header .flex-container .logo {
-            flex: 2 1 auto; }
+            margin: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            border: 1px solid red;
+            flex: 5; }
             html body .wrapper header .flex-container .logo a {
               letter-spacing: 3px;
               color: white;
               text-decoration: none;
               font-size: 14px; }
           html body .wrapper header .flex-container menu {
+            padding: 0;
+            margin: 0;
+            border: 1px solid red;
             display: flex;
-            flex: 1 1 auto;
+            flex: 3;
             flex-wrap: wrap;
             justify-content: space-around; }
             html body .wrapper header .flex-container menu li {
               list-style-type: none; }
               html body .wrapper header .flex-container menu li a {
-                margin-left: 5px;
                 font-size: 14px;
                 text-decoration: none;
                 color: white; }
                 html body .wrapper header .flex-container menu li a:hover {
                   border-bottom: 2px solid gray; }
         html body .wrapper header .flex-title-container {
-          margin: 146px 100px 0 150px;
+          border: 1px solid red;
           display: flex;
-          flex: 1 1 auto;
-          flex-wrap: wrap;
           flex-direction: column;
-          align-items: center; }
+          flex-wrap: wrap;
+          align-items: stretch;
+          justify-content: center;
+          flex-grow: 1; }
+          html body .wrapper header .flex-title-container div {
+            border: 1px solid blue;
+            align-self: center; }
+            html body .wrapper header .flex-title-container div:nth-child(3) {
+              border: 1px solid blue; }
           html body .wrapper header .flex-title-container h1 {
             margin: 0;
+            padding: 0;
             color: white;
             letter-spacing: 10px;
             font-size: 50px;
@@ -73,9 +92,6 @@ html {
             color: white;
             font-size: 14px; }
           html body .wrapper header .flex-title-container button {
-            margin-top: 172px;
-            margin-left: -30px;
-            margin-bottom: 50px;
             background-color: rgba(0, 0, 0, 0.4);
             border: 2px solid white;
             padding: 20px 80px 20px 80px;
@@ -83,29 +99,28 @@ html {
             font-size: 14px; }
       html body .wrapper .flex-under-header-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 160px;
-        margin-bottom: 45px; }
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch; }
         html body .wrapper .flex-under-header-container div {
+          border: 1px solid red;
           display: flex; }
           html body .wrapper .flex-under-header-container div.left {
-            flex: 4;
+            flex: 1;
             font-size: 24px;
-            padding: 100px;
-            padding-bottom: 80px;
             line-height: 1.8; }
             html body .wrapper .flex-under-header-container div.left p {
-              padding-left: 110px; }
+              margin: 0;
+              padding: 120px;
+              text-align: left; }
           html body .wrapper .flex-under-header-container div.right {
-            flex: 5;
+            flex: 1;
             font-size: 14px;
             align-items: center; }
             html body .wrapper .flex-under-header-container div.right p {
-              padding-top: 40px;
-              margin-top: 0;
+              margin: 0;
               text-align: justify;
-              padding-right: 200px; }
+              padding-right: 120px; }
       html body .wrapper .flex-featured-articles {
         background-color: #9E9E9E;
         padding-bottom: 180px; }
@@ -133,73 +148,98 @@ html {
             grid-column-gap: 25px;
             justify-items: start; }
       html body .wrapper div.subscribe {
+        border: 1px solid red;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: stretch;
+        padding: 80px;
         flex-wrap: wrap;
         background-color: white;
-        flex: 1 0 auto;
-        margin: 0 205px;
-        padding: 20px 0px; }
-        html body .wrapper div.subscribe div.subscribe-newsletter p {
-          padding: 60px; }
+        margin: 0 205px; }
+        html body .wrapper div.subscribe p {
+          margin: 0;
+          padding: 0;
+          font-size: 24px; }
+        html body .wrapper div.subscribe div.subscribe-newsletter {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 3;
+          border: 1px solid red; }
         html body .wrapper div.subscribe div.form {
+          flex: 4;
+          border: 1px solid red;
           display: flex;
           flex-wrap: wrap;
-          padding: 0 50px;
-          flex: 1 0 auto;
-          align-items: center;
-          justify-content: center; }
+          align-items: center; }
           html body .wrapper div.subscribe div.form input {
+            border: 1px solid red;
+            flex: 3;
             padding-left: 25px;
-            margin: 10px;
             border: 1px solid black;
             font-size: 14px;
-            width: 400px;
             height: 60px;
-            margin: 0; }
+            margin: 0;
+            align-content: center; }
           html body .wrapper div.subscribe div.form button.subscribe-button {
+            border: 1px solid red;
+            flex: 1;
             border: 1px solid black;
             height: 64px;
             width: 150px;
             background-color: black;
             color: white;
             font-size: 14px;
-            margin: 0; }
+            margin: 0;
+            align-content: center; }
   html footer div.flex-footer {
     display: flex;
-    flex-wrap: nowrap;
-    padding: 150px 100px; }
-    html footer div.flex-footer p {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 150px 100px;
+    justify-content: space-around; }
+    html footer div.flex-footer span.title {
+      font-size: 18px;
+      font-weight: bold;
+      display: block; }
+    html footer div.flex-footer .box1 {
+      flex: 1;
       text-align: justify;
+      border: 1px solid red;
+      padding: 0 50px; }
+    html footer div.flex-footer .box2 {
+      flex: 1;
+      text-align: justify;
+      border: 1px solid red;
+      padding: 0 70px; }
+    html footer div.flex-footer .box3 {
+      flex: 1;
+      text-align: justify;
+      border: 1px solid red;
+      padding: 0 50px; }
+    html footer div.flex-footer .box4 {
+      flex: 1;
       padding: 0 50px;
-      margin-right: 125px; }
-    html footer div.flex-footer div:nth-child(-n+3) {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      html footer div.flex-footer div:nth-child(-n+3) p {
-        padding: 0; }
-    html footer div.flex-footer div:nth-child(4) {
-      display: flex;
-      flex-wrap: wrap; }
-      html footer div.flex-footer div:nth-child(4) p {
-        padding: 0; }
-      html footer div.flex-footer div:nth-child(4) div.form input {
-        padding-left: 25px;
-        border: 1px solid black;
-        font-size: 14px;
-        width: 150px;
-        height: 50px;
-        margin: 0; }
-      html footer div.flex-footer div:nth-child(4) div.form button {
-        border: 1px solid black;
-        height: 54px;
-        width: 100px;
-        background-color: black;
-        color: white;
-        font-size: 14px;
-        margin: 0; }
+      border: 1px solid red; }
+      html footer div.flex-footer .box4 .form {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row; }
+        html footer div.flex-footer .box4 .form input {
+          padding-left: 25px;
+          border: 1px solid black;
+          font-size: 14px;
+          height: 50px;
+          margin: 0;
+          flex-basis: 100px; }
+        html footer div.flex-footer .box4 .form button {
+          padding: 20px;
+          border: 1px solid black;
+          height: 54px;
+          background-color: black;
+          color: white;
+          font-size: 14px;
+          margin: 0;
+          align-content: center; }
   html footer .flex-bottom-container {
     padding: 26px 215px;
     display: flex;
