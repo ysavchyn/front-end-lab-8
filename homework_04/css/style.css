@@ -36,7 +36,7 @@ html {
             display: flex;
             flex-wrap: nowrap;
             border: 1px solid red;
-            flex: 5; }
+            flex: 3; }
             html body .wrapper header .flex-container .logo a {
               letter-spacing: 3px;
               color: white;
@@ -47,7 +47,7 @@ html {
             margin: 0;
             border: 1px solid red;
             display: flex;
-            flex: 3;
+            flex: 2;
             flex-wrap: wrap;
             justify-content: space-around; }
             html body .wrapper header .flex-container menu li {
@@ -59,18 +59,24 @@ html {
                 html body .wrapper header .flex-container menu li a:hover {
                   border-bottom: 2px solid gray; }
         html body .wrapper header .flex-title-container {
-          border: 1px solid red;
+          border: 1px solid blue;
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          align-items: stretch;
           justify-content: center;
+          align-items: center;
           flex-grow: 1; }
-          html body .wrapper header .flex-title-container div {
-            border: 1px solid blue;
-            align-self: center; }
-            html body .wrapper header .flex-title-container div:nth-child(3) {
-              border: 1px solid blue; }
+          html body .wrapper header .flex-title-container .main-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid yellow;
+            flex: 4; }
+            html body .wrapper header .flex-title-container .main-title div {
+              border: 1px solid red; }
+          html body .wrapper header .flex-title-container .main-button {
+            flex: 1; }
           html body .wrapper header .flex-title-container h1 {
             margin: 0;
             padding: 0;
@@ -100,29 +106,39 @@ html {
       html body .wrapper .flex-under-header-container {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        align-items: stretch; }
-        html body .wrapper .flex-under-header-container div {
-          border: 1px solid red;
-          display: flex; }
-          html body .wrapper .flex-under-header-container div.left {
-            flex: 1;
-            font-size: 24px;
-            line-height: 1.8; }
-            html body .wrapper .flex-under-header-container div.left p {
-              margin: 0;
-              padding: 120px;
-              text-align: left; }
-          html body .wrapper .flex-under-header-container div.right {
-            flex: 1;
-            font-size: 14px;
-            align-items: center; }
-            html body .wrapper .flex-under-header-container div.right p {
-              margin: 0;
-              text-align: justify;
-              padding-right: 120px; }
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 7%; }
+        html body .wrapper .flex-under-header-container div.flex-under-header {
+          padding: 3%;
+          border: 1px solid orange;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap; }
+          html body .wrapper .flex-under-header-container div.flex-under-header div {
+            border: 1px solid red;
+            display: flex; }
+            html body .wrapper .flex-under-header-container div.flex-under-header div.left {
+              padding: 0 25px;
+              flex: 1;
+              font-size: 24px;
+              line-height: 1.8; }
+              html body .wrapper .flex-under-header-container div.flex-under-header div.left p {
+                margin: 0;
+                padding: 0;
+                text-align: left; }
+            html body .wrapper .flex-under-header-container div.flex-under-header div.right {
+              padding: 0 25px;
+              flex: 1;
+              font-size: 14px;
+              align-items: center; }
+              html body .wrapper .flex-under-header-container div.flex-under-header div.right p {
+                padding: 0;
+                margin: 0;
+                text-align: justify; }
       html body .wrapper .flex-featured-articles {
-        background-color: #9E9E9E;
+        background-color: lightgray;
         padding-bottom: 180px; }
         html body .wrapper .flex-featured-articles p {
           margin: 0;
@@ -147,119 +163,144 @@ html {
             grid-template-rows: 300px;
             grid-column-gap: 25px;
             justify-items: start; }
-      html body .wrapper div.subscribe {
-        border: 1px solid red;
-        display: flex;
-        align-items: stretch;
+      html body .wrapper div.subscribe-container {
+        margin: 0 13%;
         padding: 80px;
-        flex-wrap: wrap;
-        background-color: white;
-        margin: 0 205px; }
-        html body .wrapper div.subscribe p {
-          margin: 0;
-          padding: 0;
-          font-size: 24px; }
-        html body .wrapper div.subscribe div.subscribe-newsletter {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex: 3;
-          border: 1px solid red; }
-        html body .wrapper div.subscribe div.form {
-          flex: 4;
+        background-color: white; }
+        html body .wrapper div.subscribe-container div.subscribe {
           border: 1px solid red;
           display: flex;
-          flex-wrap: wrap;
-          align-items: center; }
-          html body .wrapper div.subscribe div.form input {
-            border: 1px solid red;
+          align-items: stretch;
+          flex-wrap: nowrap;
+          background-color: white; }
+          html body .wrapper div.subscribe-container div.subscribe p {
+            margin: 0;
+            padding: 0;
+            font-size: 24px; }
+          html body .wrapper div.subscribe-container div.subscribe div.subscribe-newsletter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             flex: 3;
+            border: 1px solid red; }
+          html body .wrapper div.subscribe-container div.subscribe div.form {
+            flex: 4;
+            border: 1px solid red;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center; }
+            html body .wrapper div.subscribe-container div.subscribe div.form input {
+              border: 1px solid red;
+              flex: 3;
+              padding-left: 25px;
+              border: 1px solid black;
+              font-size: 14px;
+              height: 60px;
+              margin: 0;
+              align-content: center; }
+            html body .wrapper div.subscribe-container div.subscribe div.form button.subscribe-button {
+              border: 1px solid red;
+              flex: 1;
+              border: 1px solid black;
+              height: 64px;
+              width: 150px;
+              background-color: black;
+              color: white;
+              font-size: 14px;
+              margin: 0;
+              align-content: center; }
+  html footer div.flex-footer-container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 10%; }
+    html footer div.flex-footer-container div.flex-footer {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      font-size: 13px;
+      color: gray; }
+      html footer div.flex-footer-container div.flex-footer span.title {
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        color: black; }
+      html footer div.flex-footer-container div.flex-footer .box1 {
+        padding: 3%;
+        border: 1px solid green;
+        flex: 1;
+        text-align: justify; }
+      html footer div.flex-footer-container div.flex-footer .box2 {
+        padding: 3%;
+        border: 1px solid green;
+        line-height: 25px;
+        flex: 1;
+        text-align: justify; }
+      html footer div.flex-footer-container div.flex-footer .box3 {
+        padding: 3%;
+        border: 1px solid green;
+        flex: 1;
+        text-align: justify; }
+        html footer div.flex-footer-container div.flex-footer .box3 .time {
+          color: lightgray; }
+      html footer div.flex-footer-container div.flex-footer .box4 {
+        padding: 3%;
+        border: 1px solid green;
+        flex: 1; }
+        html footer div.flex-footer-container div.flex-footer .box4 .form {
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: row; }
+          html footer div.flex-footer-container div.flex-footer .box4 .form input {
             padding-left: 25px;
             border: 1px solid black;
             font-size: 14px;
-            height: 60px;
+            height: 50px;
             margin: 0;
-            align-content: center; }
-          html body .wrapper div.subscribe div.form button.subscribe-button {
-            border: 1px solid red;
-            flex: 1;
+            flex-basis: 100px; }
+          html footer div.flex-footer-container div.flex-footer .box4 .form button {
+            padding: 20px;
             border: 1px solid black;
-            height: 64px;
-            width: 150px;
+            height: 54px;
             background-color: black;
             color: white;
             font-size: 14px;
             margin: 0;
             align-content: center; }
-  html footer div.flex-footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 150px 100px;
-    justify-content: space-around; }
-    html footer div.flex-footer span.title {
-      font-size: 18px;
-      font-weight: bold;
-      display: block; }
-    html footer div.flex-footer .box1 {
-      flex: 1;
-      text-align: justify;
-      border: 1px solid red;
-      padding: 0 50px; }
-    html footer div.flex-footer .box2 {
-      flex: 1;
-      text-align: justify;
-      border: 1px solid red;
-      padding: 0 70px; }
-    html footer div.flex-footer .box3 {
-      flex: 1;
-      text-align: justify;
-      border: 1px solid red;
-      padding: 0 50px; }
-    html footer div.flex-footer .box4 {
-      flex: 1;
-      padding: 0 50px;
-      border: 1px solid red; }
-      html footer div.flex-footer .box4 .form {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row; }
-        html footer div.flex-footer .box4 .form input {
-          padding-left: 25px;
-          border: 1px solid black;
-          font-size: 14px;
-          height: 50px;
-          margin: 0;
-          flex-basis: 100px; }
-        html footer div.flex-footer .box4 .form button {
-          padding: 20px;
-          border: 1px solid black;
-          height: 54px;
-          background-color: black;
-          color: white;
-          font-size: 14px;
-          margin: 0;
-          align-content: center; }
   html footer .flex-bottom-container {
-    padding: 26px 215px;
+    border: 1px solid blue;
+    padding: 0 215px;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap; }
+    align-items: stretch;
+    flex-wrap: nowrap;
+    flex-grow: 1; }
     html footer .flex-bottom-container .logo {
-      flex: 2 1 auto; }
+      margin: 0;
+      display: flex;
+      padding: 20px 0;
+      flex-wrap: nowrap;
+      border: 1px solid red;
+      border-top: 2px solid silver;
+      flex: 3; }
       html footer .flex-bottom-container .logo a {
-        color: gray;
+        color: black;
         text-decoration: none;
         font-size: 14px; }
     html footer .flex-bottom-container .bottom-menu {
+      padding: 0;
+      margin: 0;
+      border: 1px solid red;
+      border-top: 2px solid silver;
       display: flex;
-      flex: 1 1 auto;
+      flex: 2;
       flex-wrap: wrap;
       justify-content: space-around; }
       html footer .flex-bottom-container .bottom-menu li {
+        align-self: center;
         list-style-type: none; }
         html footer .flex-bottom-container .bottom-menu li a {
-          margin-left: 5px;
           font-size: 14px;
           text-decoration: none;
           color: black; }
