@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(http://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215; }
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans'; }
+  html body {
+    margin: 0;
+    padding: 0; }
+    html body img {
+      max-width: 100%; }
+    html body .wrapper {
+      margin: 0;
+      padding: 0; }
+      html body .wrapper header {
+        min-height: 740px;
+        background-image: url(../img/apples.jpg);
+        background-size: cover; }
+        html body .wrapper header .flex-container {
+          padding: 26px 215px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap; }
+          html body .wrapper header .flex-container .logo {
+            flex: 2 1 auto; }
+            html body .wrapper header .flex-container .logo a {
+              letter-spacing: 3px;
+              color: white;
+              text-decoration: none;
+              font-size: 14px; }
+          html body .wrapper header .flex-container menu {
+            display: flex;
+            flex: 1 1 auto;
+            flex-wrap: wrap;
+            justify-content: space-around; }
+            html body .wrapper header .flex-container menu li {
+              list-style-type: none; }
+              html body .wrapper header .flex-container menu li a {
+                margin-left: 5px;
+                font-size: 14px;
+                text-decoration: none;
+                color: white; }
+                html body .wrapper header .flex-container menu li a:hover {
+                  border-bottom: 2px solid gray; }
+        html body .wrapper header .flex-title-container {
+          margin: 146px 100px 0 150px;
+          display: flex;
+          flex: 1 1 auto;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: center; }
+          html body .wrapper header .flex-title-container h1 {
+            margin: 0;
+            color: white;
+            letter-spacing: 10px;
+            font-size: 50px;
+            font-weight: 100; }
+            html body .wrapper header .flex-title-container h1 .amp {
+              font-size: 100px;
+              font-weight: 100; }
+            html body .wrapper header .flex-title-container h1 .sup {
+              vertical-align: baseline;
+              position: relative;
+              top: -26px;
+              font-size: 14px;
+              letter-spacing: 0; }
+          html body .wrapper header .flex-title-container p {
+            margin: 0;
+            color: white;
+            font-size: 14px; }
+          html body .wrapper header .flex-title-container button {
+            margin-top: 172px;
+            margin-left: -30px;
+            margin-bottom: 50px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 2px solid white;
+            padding: 20px 80px 20px 80px;
+            color: white;
+            font-size: 14px; }
+      html body .wrapper .flex-under-header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 160px;
+        margin-bottom: 45px; }
+        html body .wrapper .flex-under-header-container div {
+          display: flex; }
+          html body .wrapper .flex-under-header-container div.left {
+            flex: 4;
+            font-size: 24px;
+            padding: 100px;
+            padding-bottom: 80px;
+            line-height: 1.8; }
+            html body .wrapper .flex-under-header-container div.left p {
+              padding-left: 110px; }
+          html body .wrapper .flex-under-header-container div.right {
+            flex: 5;
+            font-size: 14px;
+            align-items: center; }
+            html body .wrapper .flex-under-header-container div.right p {
+              padding-top: 40px;
+              margin-top: 0;
+              text-align: justify;
+              padding-right: 200px; }
+      html body .wrapper .flex-featured-articles {
+        background-color: #9E9E9E;
+        padding-bottom: 180px; }
+        html body .wrapper .flex-featured-articles p {
+          margin: 0;
+          padding-top: 145px;
+          padding-bottom: 80px;
+          font-size: 24px;
+          text-align: center; }
+        html body .wrapper .flex-featured-articles div.gallery {
+          padding: 0 200px;
+          padding-bottom: 100px; }
+          html body .wrapper .flex-featured-articles div.gallery :first-child {
+            padding-bottom: 30px; }
+          html body .wrapper .flex-featured-articles div.gallery div.row1 {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: 300px;
+            grid-column-gap: 25px;
+            justify-items: start; }
+          html body .wrapper .flex-featured-articles div.gallery div.row2 {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: 300px;
+            grid-column-gap: 25px;
+            justify-items: start; }
+      html body .wrapper div.subscribe {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: white;
+        flex: 1 0 auto;
+        margin: 0 205px;
+        padding: 20px 0px; }
+        html body .wrapper div.subscribe div.subscribe-newsletter p {
+          padding: 60px; }
+        html body .wrapper div.subscribe div.form {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 50px;
+          flex: 1 0 auto;
+          align-items: center;
+          justify-content: center; }
+          html body .wrapper div.subscribe div.form input {
+            padding-left: 25px;
+            margin: 10px;
+            border: 1px solid black;
+            font-size: 14px;
+            width: 400px;
+            height: 60px;
+            margin: 0; }
+          html body .wrapper div.subscribe div.form button.subscribe-button {
+            border: 1px solid black;
+            height: 64px;
+            width: 150px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            margin: 0; }
+  html footer div.flex-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 150px 100px; }
+    html footer div.flex-footer p {
+      text-align: justify;
+      padding: 0 50px;
+      margin-right: 125px; }
+    html footer div.flex-footer div:nth-child(-n+3) {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      html footer div.flex-footer div:nth-child(-n+3) p {
+        padding: 0; }
+    html footer div.flex-footer div:nth-child(4) {
+      display: flex;
+      flex-wrap: wrap; }
+      html footer div.flex-footer div:nth-child(4) p {
+        padding: 0; }
+      html footer div.flex-footer div:nth-child(4) div.form input {
+        padding-left: 25px;
+        border: 1px solid black;
+        font-size: 14px;
+        width: 150px;
+        height: 50px;
+        margin: 0; }
+      html footer div.flex-footer div:nth-child(4) div.form button {
+        border: 1px solid black;
+        height: 54px;
+        width: 100px;
+        background-color: black;
+        color: white;
+        font-size: 14px;
+        margin: 0; }
+  html footer .flex-bottom-container {
+    padding: 26px 215px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    html footer .flex-bottom-container .logo {
+      flex: 2 1 auto; }
+      html footer .flex-bottom-container .logo a {
+        color: gray;
+        text-decoration: none;
+        font-size: 14px; }
+    html footer .flex-bottom-container .bottom-menu {
+      display: flex;
+      flex: 1 1 auto;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      html footer .flex-bottom-container .bottom-menu li {
+        list-style-type: none; }
+        html footer .flex-bottom-container .bottom-menu li a {
+          margin-left: 5px;
+          font-size: 14px;
+          text-decoration: none;
+          color: black; }
+          html footer .flex-bottom-container .bottom-menu li a:hover {
+            border-bottom: 2px solid gray; }
