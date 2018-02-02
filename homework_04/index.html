@@ -13,16 +13,16 @@
 
 <body>
     <div class="wrapper">
-        <header>
+        <header id="home">
             <div class="flex-container">
                 <div class="logo">
-                    <div><a href="">BLACK &amp; WHITE</a></div>
+                    <div><a href="#home">BLACK &amp; WHITE</a></div>
                 </div>
                 <menu>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Vacancies</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#vacancies">Vacancies</a></li>
                 </menu>
             </div>
             <div class="flex-title-container">
@@ -41,7 +41,7 @@
         </header>
 
 
-        <div class="flex-under-header-container">
+        <div id="about" class="flex-under-header-container">
             <div class="flex-under-header">
                 <div class="left">
                     <p>Lorem ipsum dolor, consectuer adipiscing. Aenean <b>commodo ligula</b> eget dolor.</p>
@@ -53,26 +53,33 @@
         </div>
 
 
-        <div class="flex-featured-articles">
+        <div id="shop" class="flex-featured-articles">
             <p>Read some of our <b>featured articles</b></p>
             <div class="gallery">
-                <div class="row1">
+                <div class="flex-row-1">
                     <div>
-                        <img src="img/sample.jpg">
+                            <button>172 &hearts;</button>
+                            <p>January `15 South France</p>
                     </div>
                     <div>
-                        <img src="img/sample2.jpg">
-                    </div>
-                </div>
-                <div class="row2">
-                    <div>
-                        <img src="img/sample2.jpg">
-                    </div>
-                    <div>
-                        <img src="img/sample3.jpg">
+                        <button>112 &hearts;</button>
+                        <p>January `15 Budapest</p>
                     </div>
                 </div>
+                <div class="flex-row-2">
+                    <div>
+                        <button>112 &hearts;</button>
+                        <p>January `15 Budapest</p>
+                    </div>
+                    <div>
+                        <button>313 &hearts;</button>
+                        <p>January `15 South America</p>
+                    </div>
+                </div>
+
             </div>
+
+
 
             <div class="subscribe-container">
                 <div class="subscribe">
@@ -90,7 +97,7 @@
 
 
         <footer>
-            <div class="flex-footer-container">
+            <div id="vacancies" class="flex-footer-container">
                 <div class="flex-footer">
                     <div class="box1">
                         <p> <span class="title">Black &amp; White</span><br> consequuntur magni dolores atione voluptatem sequi nesc ue porro quisquam est, qui d sum quia dolor sit amet, cons sum quia sum quia</p>
@@ -116,13 +123,13 @@
 
             <div class="flex-bottom-container">
                 <div class="logo">
-                    <div><a href="">&copy; 2015 Ruben Stom.</a></div>
+                    <div><a href="#home">&copy; 2015 Ruben Stom.</a></div>
                 </div>
                 <div class="bottom-menu">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Vacancies</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#vacancies">Vacancies</a></li>
                 </div>
             </div>
         </footer>

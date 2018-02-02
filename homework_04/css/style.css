@@ -12,7 +12,8 @@ html {
     margin: 0;
     padding: 0; }
     html body img {
-      max-width: 100%; }
+      max-width: 100%;
+      height: auto; }
     html body .wrapper {
       margin: 0;
       padding: 0; }
@@ -23,10 +24,8 @@ html {
         align-items: stretch;
         justify-content: flex-start;
         min-height: 740px;
-        background-image: url(../img/apples.jpg);
-        background-size: cover; }
+        background: url(../img/apples.jpg) no-repeat center center fixed; }
         html body .wrapper header .flex-container {
-          border: 1px solid red;
           padding: 26px 215px;
           display: flex;
           align-items: center;
@@ -35,17 +34,17 @@ html {
             margin: 0;
             display: flex;
             flex-wrap: nowrap;
-            border: 1px solid red;
             flex: 3; }
             html body .wrapper header .flex-container .logo a {
               letter-spacing: 3px;
               color: white;
               text-decoration: none;
               font-size: 14px; }
+              html body .wrapper header .flex-container .logo a:hover {
+                color: red; }
           html body .wrapper header .flex-container menu {
             padding: 0;
             margin: 0;
-            border: 1px solid red;
             display: flex;
             flex: 2;
             flex-wrap: wrap;
@@ -57,9 +56,8 @@ html {
                 text-decoration: none;
                 color: white; }
                 html body .wrapper header .flex-container menu li a:hover {
-                  border-bottom: 2px solid gray; }
+                  border-bottom: 2px solid lightgray; }
         html body .wrapper header .flex-title-container {
-          border: 1px solid blue;
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
@@ -71,10 +69,7 @@ html {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border: 1px solid yellow;
             flex: 4; }
-            html body .wrapper header .flex-title-container .main-title div {
-              border: 1px solid red; }
           html body .wrapper header .flex-title-container .main-button {
             flex: 1; }
           html body .wrapper header .flex-title-container h1 {
@@ -103,6 +98,9 @@ html {
             padding: 20px 80px 20px 80px;
             color: white;
             font-size: 14px; }
+            html body .wrapper header .flex-title-container button:hover {
+              background-color: black;
+              cursor: pointer; }
       html body .wrapper .flex-under-header-container {
         display: flex;
         flex-direction: row;
@@ -112,12 +110,10 @@ html {
         padding: 7%; }
         html body .wrapper .flex-under-header-container div.flex-under-header {
           padding: 3%;
-          border: 1px solid orange;
           display: flex;
           flex-direction: row;
           flex-wrap: wrap; }
           html body .wrapper .flex-under-header-container div.flex-under-header div {
-            border: 1px solid red;
             display: flex; }
             html body .wrapper .flex-under-header-container div.flex-under-header div.left {
               padding: 0 25px;
@@ -147,28 +143,104 @@ html {
           font-size: 24px;
           text-align: center; }
         html body .wrapper .flex-featured-articles div.gallery {
-          padding: 0 200px;
-          padding-bottom: 100px; }
-          html body .wrapper .flex-featured-articles div.gallery :first-child {
-            padding-bottom: 30px; }
-          html body .wrapper .flex-featured-articles div.gallery div.row1 {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            grid-template-rows: 300px;
-            grid-column-gap: 25px;
-            justify-items: start; }
-          html body .wrapper .flex-featured-articles div.gallery div.row2 {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            grid-template-rows: 300px;
-            grid-column-gap: 25px;
-            justify-items: start; }
+          margin: 0;
+          padding: 0;
+          min-height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0 13%;
+          padding-bottom: 80px;
+          padding-bottom: 30px; }
+          html body .wrapper .flex-featured-articles div.gallery p {
+            font-size: 16px;
+            color: white; }
+          html body .wrapper .flex-featured-articles div.gallery button {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 2px solid white;
+            padding: 10px 20px 10px 20px;
+            color: white;
+            font-size: 14px; }
+            html body .wrapper .flex-featured-articles div.gallery button:hover {
+              background-color: black;
+              cursor: pointer; }
+          html body .wrapper .flex-featured-articles div.gallery .flex-row-1 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 3%; }
+            html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) {
+              margin-right: 3%;
+              background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              width: 100%;
+              max-height: 300px;
+              flex: 2;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: space-between; }
+              html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) p {
+                align-self: flex-start;
+                padding: 0;
+                padding: 20px; }
+              html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) button {
+                margin: 20px; }
+            html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) {
+              background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample2.jpg);
+              background-size: cover;
+              width: 100%;
+              height: 300px;
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: space-between; }
+              html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) p {
+                align-self: flex-start;
+                padding: 20px; }
+              html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) button {
+                margin: 20px; }
+          html body .wrapper .flex-featured-articles div.gallery .flex-row-2 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 30px; }
+            html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) {
+              background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample2.jpg);
+              background-size: cover;
+              width: 100%;
+              max-height: 300px;
+              flex: 1;
+              margin-right: 3%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: space-between; }
+              html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) p {
+                align-self: flex-start;
+                padding: 20px; }
+              html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) button {
+                margin: 20px; }
+            html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) {
+              background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample3.jpg);
+              background-size: cover;
+              width: 100%;
+              height: 300px;
+              flex: 2;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: space-between; }
+              html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) p {
+                align-self: flex-start;
+                padding: 20px; }
+              html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) button {
+                margin: 20px; }
       html body .wrapper div.subscribe-container {
         margin: 0 13%;
-        padding: 80px;
+        padding: 5%;
         background-color: white; }
         html body .wrapper div.subscribe-container div.subscribe {
-          border: 1px solid red;
           display: flex;
           align-items: stretch;
           flex-wrap: nowrap;
@@ -181,16 +253,13 @@ html {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex: 3;
-            border: 1px solid red; }
+            flex: 3; }
           html body .wrapper div.subscribe-container div.subscribe div.form {
             flex: 4;
-            border: 1px solid red;
             display: flex;
             flex-wrap: nowrap;
             align-items: center; }
             html body .wrapper div.subscribe-container div.subscribe div.form input {
-              border: 1px solid red;
               flex: 3;
               padding-left: 25px;
               border: 1px solid black;
@@ -199,7 +268,6 @@ html {
               margin: 0;
               align-content: center; }
             html body .wrapper div.subscribe-container div.subscribe div.form button.subscribe-button {
-              border: 1px solid red;
               flex: 1;
               border: 1px solid black;
               height: 64px;
@@ -209,8 +277,10 @@ html {
               font-size: 14px;
               margin: 0;
               align-content: center; }
+              html body .wrapper div.subscribe-container div.subscribe div.form button.subscribe-button:hover {
+                background-color: red;
+                cursor: pointer; }
   html footer div.flex-footer-container {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,25 +299,21 @@ html {
         color: black; }
       html footer div.flex-footer-container div.flex-footer .box1 {
         padding: 3%;
-        border: 1px solid green;
         flex: 1;
         text-align: justify; }
       html footer div.flex-footer-container div.flex-footer .box2 {
         padding: 3%;
-        border: 1px solid green;
         line-height: 25px;
         flex: 1;
         text-align: justify; }
       html footer div.flex-footer-container div.flex-footer .box3 {
         padding: 3%;
-        border: 1px solid green;
         flex: 1;
         text-align: justify; }
         html footer div.flex-footer-container div.flex-footer .box3 .time {
           color: lightgray; }
       html footer div.flex-footer-container div.flex-footer .box4 {
         padding: 3%;
-        border: 1px solid green;
         flex: 1; }
         html footer div.flex-footer-container div.flex-footer .box4 .form {
           display: flex;
@@ -269,8 +335,10 @@ html {
             font-size: 14px;
             margin: 0;
             align-content: center; }
+            html footer div.flex-footer-container div.flex-footer .box4 .form button:hover {
+              background-color: red;
+              cursor: pointer; }
   html footer .flex-bottom-container {
-    border: 1px solid blue;
     padding: 0 215px;
     display: flex;
     align-items: stretch;
@@ -281,18 +349,18 @@ html {
       display: flex;
       padding: 20px 0;
       flex-wrap: nowrap;
-      border: 1px solid red;
-      border-top: 2px solid silver;
+      border-top: 2px solid lightgray;
       flex: 3; }
       html footer .flex-bottom-container .logo a {
         color: black;
         text-decoration: none;
         font-size: 14px; }
+        html footer .flex-bottom-container .logo a:hover {
+          color: red; }
     html footer .flex-bottom-container .bottom-menu {
       padding: 0;
       margin: 0;
-      border: 1px solid red;
-      border-top: 2px solid silver;
+      border-top: 2px solid lightgray;
       display: flex;
       flex: 2;
       flex-wrap: wrap;
@@ -305,4 +373,4 @@ html {
           text-decoration: none;
           color: black; }
           html footer .flex-bottom-container .bottom-menu li a:hover {
-            border-bottom: 2px solid gray; }
+            border-bottom: 2px solid lightgray; }
