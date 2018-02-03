@@ -1,376 +1,535 @@
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(http://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215; }
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Open Sans Regular"), local("OpenSans-Regular"), url(http://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
 html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans'; }
-  html body {
     margin: 0;
-    padding: 0; }
-    html body img {
-      max-width: 100%;
-      height: auto; }
-    html body .wrapper {
-      margin: 0;
-      padding: 0; }
-      html body .wrapper header {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: stretch;
-        justify-content: flex-start;
-        min-height: 740px;
-        background: url(../img/apples.jpg) no-repeat center center fixed; }
-        html body .wrapper header .flex-container {
-          padding: 26px 215px;
-          display: flex;
-          align-items: center;
-          flex-wrap: nowrap; }
-          html body .wrapper header .flex-container .logo {
-            margin: 0;
-            display: flex;
-            flex-wrap: nowrap;
-            flex: 3; }
-            html body .wrapper header .flex-container .logo a {
-              letter-spacing: 3px;
-              color: white;
-              text-decoration: none;
-              font-size: 14px; }
-              html body .wrapper header .flex-container .logo a:hover {
-                color: red; }
-          html body .wrapper header .flex-container menu {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex: 2;
-            flex-wrap: wrap;
-            justify-content: space-around; }
-            html body .wrapper header .flex-container menu li {
-              list-style-type: none; }
-              html body .wrapper header .flex-container menu li a {
-                font-size: 14px;
-                text-decoration: none;
-                color: white; }
-                html body .wrapper header .flex-container menu li a:hover {
-                  border-bottom: 2px solid lightgray; }
-        html body .wrapper header .flex-title-container {
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-          flex-grow: 1; }
-          html body .wrapper header .flex-title-container .main-title {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex: 4; }
-          html body .wrapper header .flex-title-container .main-button {
-            flex: 1; }
-          html body .wrapper header .flex-title-container h1 {
-            margin: 0;
-            padding: 0;
-            color: white;
-            letter-spacing: 10px;
-            font-size: 50px;
-            font-weight: 100; }
-            html body .wrapper header .flex-title-container h1 .amp {
-              font-size: 100px;
-              font-weight: 100; }
-            html body .wrapper header .flex-title-container h1 .sup {
-              vertical-align: baseline;
-              position: relative;
-              top: -26px;
-              font-size: 14px;
-              letter-spacing: 0; }
-          html body .wrapper header .flex-title-container p {
-            margin: 0;
-            color: white;
-            font-size: 14px; }
-          html body .wrapper header .flex-title-container button {
-            background-color: rgba(0, 0, 0, 0.4);
-            border: 2px solid white;
-            padding: 20px 80px 20px 80px;
-            color: white;
-            font-size: 14px; }
-            html body .wrapper header .flex-title-container button:hover {
-              background-color: black;
-              cursor: pointer; }
-      html body .wrapper .flex-under-header-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        padding: 7%; }
-        html body .wrapper .flex-under-header-container div.flex-under-header {
-          padding: 3%;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap; }
-          html body .wrapper .flex-under-header-container div.flex-under-header div {
-            display: flex; }
-            html body .wrapper .flex-under-header-container div.flex-under-header div.left {
-              padding: 0 25px;
-              flex: 1;
-              font-size: 24px;
-              line-height: 1.8; }
-              html body .wrapper .flex-under-header-container div.flex-under-header div.left p {
-                margin: 0;
-                padding: 0;
-                text-align: left; }
-            html body .wrapper .flex-under-header-container div.flex-under-header div.right {
-              padding: 0 25px;
-              flex: 1;
-              font-size: 14px;
-              align-items: center; }
-              html body .wrapper .flex-under-header-container div.flex-under-header div.right p {
-                padding: 0;
-                margin: 0;
-                text-align: justify; }
-      html body .wrapper .flex-featured-articles {
-        background-color: lightgray;
-        padding-bottom: 180px; }
-        html body .wrapper .flex-featured-articles p {
-          margin: 0;
-          padding-top: 145px;
-          padding-bottom: 80px;
-          font-size: 24px;
-          text-align: center; }
-        html body .wrapper .flex-featured-articles div.gallery {
-          margin: 0;
-          padding: 0;
-          min-height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          padding: 0 13%;
-          padding-bottom: 80px;
-          padding-bottom: 30px; }
-          html body .wrapper .flex-featured-articles div.gallery p {
-            font-size: 16px;
-            color: white; }
-          html body .wrapper .flex-featured-articles div.gallery button {
-            background-color: rgba(0, 0, 0, 0.4);
-            border: 2px solid white;
-            padding: 10px 20px 10px 20px;
-            color: white;
-            font-size: 14px; }
-            html body .wrapper .flex-featured-articles div.gallery button:hover {
-              background-color: black;
-              cursor: pointer; }
-          html body .wrapper .flex-featured-articles div.gallery .flex-row-1 {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 3%; }
-            html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) {
-              margin-right: 3%;
-              background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample.jpg);
-              background-repeat: no-repeat;
-              background-size: cover;
-              width: 100%;
-              max-height: 300px;
-              flex: 2;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              justify-content: space-between; }
-              html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) p {
-                align-self: flex-start;
-                padding: 0;
-                padding: 20px; }
-              html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) button {
-                margin: 20px; }
-            html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) {
-              background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample2.jpg);
-              background-size: cover;
-              width: 100%;
-              height: 300px;
-              flex: 1;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              justify-content: space-between; }
-              html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) p {
-                align-self: flex-start;
-                padding: 20px; }
-              html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) button {
-                margin: 20px; }
-          html body .wrapper .flex-featured-articles div.gallery .flex-row-2 {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 30px; }
-            html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) {
-              background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample2.jpg);
-              background-size: cover;
-              width: 100%;
-              max-height: 300px;
-              flex: 1;
-              margin-right: 3%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              justify-content: space-between; }
-              html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) p {
-                align-self: flex-start;
-                padding: 20px; }
-              html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) button {
-                margin: 20px; }
-            html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) {
-              background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample3.jpg);
-              background-size: cover;
-              width: 100%;
-              height: 300px;
-              flex: 2;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              justify-content: space-between; }
-              html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) p {
-                align-self: flex-start;
-                padding: 20px; }
-              html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) button {
-                margin: 20px; }
-      html body .wrapper div.subscribe-container {
-        margin: 0 13%;
-        padding: 5%;
-        background-color: white; }
-        html body .wrapper div.subscribe-container div.subscribe {
-          display: flex;
-          align-items: stretch;
-          flex-wrap: nowrap;
-          background-color: white; }
-          html body .wrapper div.subscribe-container div.subscribe p {
-            margin: 0;
-            padding: 0;
-            font-size: 24px; }
-          html body .wrapper div.subscribe-container div.subscribe div.subscribe-newsletter {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 3; }
-          html body .wrapper div.subscribe-container div.subscribe div.form {
-            flex: 4;
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center; }
-            html body .wrapper div.subscribe-container div.subscribe div.form input {
-              flex: 3;
-              padding-left: 25px;
-              border: 1px solid black;
-              font-size: 14px;
-              height: 60px;
-              margin: 0;
-              align-content: center; }
-            html body .wrapper div.subscribe-container div.subscribe div.form button.subscribe-button {
-              flex: 1;
-              border: 1px solid black;
-              height: 64px;
-              width: 150px;
-              background-color: black;
-              color: white;
-              font-size: 14px;
-              margin: 0;
-              align-content: center; }
-              html body .wrapper div.subscribe-container div.subscribe div.form button.subscribe-button:hover {
-                background-color: red;
-                cursor: pointer; }
-  html footer div.flex-footer-container {
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+html body {
+    margin: 0;
+    padding: 0;
+}
+
+html body img {
+    max-width: 100%;
+    height: auto;
+}
+
+html body .wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+html body .wrapper header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 740px;
+    background: url(../img/apples.jpg) no-repeat center center fixed;
+}
+
+html body .wrapper header .flex-container {
+    padding: 26px 215px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+html body .wrapper header .flex-container .logo {
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 3;
+}
+
+html body .wrapper header .flex-container .logo a {
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+html body .wrapper header .flex-container .logo a:hover {
+    color: red;
+}
+
+html body .wrapper header .flex-container .menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+html body .wrapper header .flex-container .menu {
+    list-style-type: none;
+}
+
+html body .wrapper header .flex-container .menu a {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+html body .wrapper header .flex-container .menu a:hover {
+    border-bottom: 2px solid lightgray;
+}
+
+html body .wrapper header .flex-title-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+html body .wrapper header .flex-title-container .main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 4;
+}
+
+html body .wrapper header .flex-title-container .main-button {
+    flex: 1;
+}
+
+html body .wrapper header .flex-title-container h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+html body .wrapper header .flex-title-container h1 .amp {
+    font-size: 100px;
+    font-weight: 100;
+}
+
+html body .wrapper header .flex-title-container h1 .sup {
+    vertical-align: baseline;
+    position: relative;
+    top: -26px;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+html body .wrapper header .flex-title-container p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+html body .wrapper header .flex-title-container button {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    padding: 20px 80px 20px 80px;
+    color: white;
+    font-size: 14px;
+}
+
+html body .wrapper header .flex-title-container button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+html body .wrapper .flex-under-header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+}
+
+html body .wrapper .flex-under-header-container div.flex-under-header {
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+html body .wrapper .flex-under-header-container div.flex-under-header div {
+    display: flex;
+}
+
+html body .wrapper .flex-under-header-container div.flex-under-header div.left {
+    padding: 0 25px;
+    flex: 1;
+    font-size: 24px;
+    line-height: 1.8;
+}
+
+html body .wrapper .flex-under-header-container div.flex-under-header div.left p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+html body .wrapper .flex-under-header-container div.flex-under-header div.right {
+    padding: 0 25px;
+    flex: 1;
+    font-size: 14px;
+    align-items: center;
+}
+
+html body .wrapper .flex-under-header-container div.flex-under-header div.right p {
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+html body .wrapper .flex-featured-articles {
+    background-color: lightgray;
+    padding-bottom: 180px;
+}
+
+html body .wrapper .flex-featured-articles p {
+    margin: 0;
+    padding-top: 145px;
+    padding-bottom: 80px;
+    font-size: 24px;
+    text-align: center;
+}
+
+html body .wrapper .flex-featured-articles div.gallery {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 13%;
+    padding-bottom: 80px;
+    padding-bottom: 30px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery p {
+    font-size: 16px;
+    color: white;
+}
+
+html body .wrapper .flex-featured-articles div.gallery button {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-size: 14px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) {
+    margin-right: 3%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid white;
+    width: 100%;
+    max-height: 300px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) p {
+    align-self: flex-start;
+    padding: 0;
+    padding: 20px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(1) button {
+    margin: 20px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample2.jpg);
+    border: 2px solid white;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) p {
+    align-self: flex-start;
+    padding: 20px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-1 div:nth-child(2) button {
+    margin: 20px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample2.jpg);
+    border: 2px solid white;
+    background-size: cover;
+    width: 100%;
+    max-height: 300px;
+    flex: 1;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) p {
+    align-self: flex-start;
+    padding: 20px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(1) button {
+    margin: 20px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%), url(../img/sample3.jpg);
+    border: 2px solid white;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) p {
+    align-self: flex-start;
+    padding: 20px;
+}
+
+html body .wrapper .flex-featured-articles div.gallery .flex-row-2 div:nth-child(2) button {
+    margin: 20px;
+}
+
+html body .wrapper div.subscribe-container {
+    margin: 0 13%;
+    padding: 5%;
+    background-color: white;
+}
+
+html body .wrapper div.subscribe-container div.subscribe {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+
+html body .wrapper div.subscribe-container div.subscribe p {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+html body .wrapper div.subscribe-container div.subscribe div.subscribe-newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+}
+
+html body .wrapper div.subscribe-container div.subscribe div.form {
+    flex: 4;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+html body .wrapper div.subscribe-container div.subscribe div.form input {
+    flex: 3;
+    padding-left: 25px;
+    border: 1px solid black;
+    font-size: 14px;
+    height: 60px;
+    margin: 0;
+    align-content: center;
+}
+
+html body .wrapper div.subscribe-container div.subscribe div.form button.subscribe-button {
+    flex: 1;
+    border: 1px solid black;
+    height: 64px;
+    width: 150px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    align-content: center;
+}
+
+html body .wrapper div.subscribe-container div.subscribe div.form button.subscribe-button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+html footer div.flex-footer-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding: 10%; }
-    html footer div.flex-footer-container div.flex-footer {
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      font-size: 13px;
-      color: gray; }
-      html footer div.flex-footer-container div.flex-footer span.title {
-        font-size: 18px;
-        font-weight: bold;
-        display: block;
-        color: black; }
-      html footer div.flex-footer-container div.flex-footer .box1 {
-        padding: 3%;
-        flex: 1;
-        text-align: justify; }
-      html footer div.flex-footer-container div.flex-footer .box2 {
-        padding: 3%;
-        line-height: 25px;
-        flex: 1;
-        text-align: justify; }
-      html footer div.flex-footer-container div.flex-footer .box3 {
-        padding: 3%;
-        flex: 1;
-        text-align: justify; }
-        html footer div.flex-footer-container div.flex-footer .box3 .time {
-          color: lightgray; }
-      html footer div.flex-footer-container div.flex-footer .box4 {
-        padding: 3%;
-        flex: 1; }
-        html footer div.flex-footer-container div.flex-footer .box4 .form {
-          display: flex;
-          flex-wrap: nowrap;
-          flex-direction: row; }
-          html footer div.flex-footer-container div.flex-footer .box4 .form input {
-            padding-left: 25px;
-            border: 1px solid black;
-            font-size: 14px;
-            height: 50px;
-            margin: 0;
-            flex-basis: 100px; }
-          html footer div.flex-footer-container div.flex-footer .box4 .form button {
-            padding: 20px;
-            border: 1px solid black;
-            height: 54px;
-            background-color: black;
-            color: white;
-            font-size: 14px;
-            margin: 0;
-            align-content: center; }
-            html footer div.flex-footer-container div.flex-footer .box4 .form button:hover {
-              background-color: red;
-              cursor: pointer; }
-  html footer .flex-bottom-container {
+    padding: 10%;
+}
+
+html footer div.flex-footer-container div.flex-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-size: 13px;
+    color: gray;
+}
+
+html footer div.flex-footer-container div.flex-footer span.title {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    color: black;
+}
+
+html footer div.flex-footer-container div.flex-footer .box1 {
+    padding: 3%;
+    flex: 1;
+    text-align: justify;
+}
+
+html footer div.flex-footer-container div.flex-footer .box2 {
+    padding: 3%;
+    line-height: 25px;
+    flex: 1;
+    text-align: justify;
+}
+
+html footer div.flex-footer-container div.flex-footer .box3 {
+    padding: 3%;
+    flex: 1;
+    text-align: justify;
+}
+
+html footer div.flex-footer-container div.flex-footer .box3 .time {
+    color: lightgray;
+}
+
+html footer div.flex-footer-container div.flex-footer .box4 {
+    padding: 3%;
+    flex: 1;
+}
+
+html footer div.flex-footer-container div.flex-footer .box4 .form {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+html footer div.flex-footer-container div.flex-footer .box4 .form input {
+    padding-left: 25px;
+    border: 1px solid black;
+    font-size: 14px;
+    height: 50px;
+    margin: 0;
+    flex-basis: 100px;
+}
+
+html footer div.flex-footer-container div.flex-footer .box4 .form button {
+    padding: 20px;
+    border: 1px solid black;
+    height: 54px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    align-content: center;
+}
+
+html footer div.flex-footer-container div.flex-footer .box4 .form button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+html footer .flex-bottom-container {
     padding: 0 215px;
     display: flex;
     align-items: stretch;
     flex-wrap: nowrap;
-    flex-grow: 1; }
-    html footer .flex-bottom-container .logo {
-      margin: 0;
-      display: flex;
-      padding: 20px 0;
-      flex-wrap: nowrap;
-      border-top: 2px solid lightgray;
-      flex: 3; }
-      html footer .flex-bottom-container .logo a {
-        color: black;
-        text-decoration: none;
-        font-size: 14px; }
-        html footer .flex-bottom-container .logo a:hover {
-          color: red; }
-    html footer .flex-bottom-container .bottom-menu {
-      padding: 0;
-      margin: 0;
-      border-top: 2px solid lightgray;
-      display: flex;
-      flex: 2;
-      flex-wrap: wrap;
-      justify-content: space-around; }
-      html footer .flex-bottom-container .bottom-menu li {
-        align-self: center;
-        list-style-type: none; }
-        html footer .flex-bottom-container .bottom-menu li a {
-          font-size: 14px;
-          text-decoration: none;
-          color: black; }
-          html footer .flex-bottom-container .bottom-menu li a:hover {
-            border-bottom: 2px solid lightgray; }
+    flex-grow: 1;
+}
+
+html footer .flex-bottom-container .logo {
+    margin: 0;
+    display: flex;
+    padding: 20px 0;
+    flex-wrap: nowrap;
+    border-top: 2px solid lightgray;
+    flex: 3;
+}
+
+html footer .flex-bottom-container .logo a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+html footer .flex-bottom-container .logo a:hover {
+    color: red;
+}
+
+html footer .flex-bottom-container .bottom-menu {
+    margin: 0;
+    padding: 22px 0;
+    border-top: 2px solid lightgray;
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+html footer .flex-bottom-container .bottom-menu {
+    align-self: center;
+    list-style-type: none;
+}
+
+html footer .flex-bottom-container .bottom-menu a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+html footer .flex-bottom-container .bottom-menu a:hover {
+    border-bottom: 2px solid lightgray;
+}
