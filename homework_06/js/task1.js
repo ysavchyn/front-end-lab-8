@@ -1,7 +1,7 @@
-let a = parseFloat(prompt("Enter side \"a\" of triangle:"));
-let b = parseFloat(prompt("Enter side \"b\" of triangle:"));
-let c = parseFloat(prompt("Enter side \"c\" of triangle:"));
-let type = "";
+let a = parseFloat(prompt("Enter side \"a\" of triangle:")),
+    b = parseFloat(prompt("Enter side \"b\" of triangle:")),
+    c = parseFloat(prompt("Enter side \"c\" of triangle:")),
+    type = "";
 
 if (a <= 0 || b <= 0 || c <= 0) {
     console.log("Incorrect data");
