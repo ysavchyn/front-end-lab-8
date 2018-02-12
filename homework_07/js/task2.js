@@ -1,17 +1,10 @@
-let startGame = confirm("Do you want to play a game?"),
-    continueGame = true,
-    minOfInterval = 0,
-    maxOfInterval = 5,
-    inputNumber,
-    totalPrize = 0,
-    currentAttemptPrize = 0,
-    maxAttemptPrize = 10;
+let continueGame = true, minOfInterval = 0,maxOfInterval = 5, inputNumber, 
+totalPrize = 0, currentAttemptPrize = 0, maxAttemptPrize = 10;
 
-if (startGame) {
+if (confirm("Do you want to play a game?")) {
     while (continueGame) {
         currentAttemptPrize = parseInt(maxAttemptPrize);
-        let randomNumber = Math.floor(minOfInterval + Math.random() * (maxOfInterval + 1 - minOfInterval));
-        //console.log(randomNumber); // For debug 
+        let randomNumber = Math.floor(minOfInterval + Math.random() * (maxOfInterval + 1 - minOfInterval)); //console.log(randomNumber); // For debug 
         for (let attempts = 3; attempts > 0; attempts--) {
             inputNumber = prompt("Enter a number from " + minOfInterval + " to " + maxOfInterval + ":" + "\nAttempts left: " + attempts + "\nTotal prize: " + totalPrize + "$" + "\nPossible prize on current attempt: " + currentAttemptPrize + "$");
             if (inputNumber == randomNumber && (inputNumber.trim() != "")) {
