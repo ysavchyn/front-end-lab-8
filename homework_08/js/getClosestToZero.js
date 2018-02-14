@@ -1,11 +1,10 @@
-let getClosestToZero = (...arrayOfValues) => {
-  let closestToZeroValue, temp = Math.abs(arrayOfValues[0]), position = 0;
-  for (let i = 1; i < arrayOfValues.length; i++) {
-    if (Math.abs(arrayOfValues[i]) < temp) {
-      temp = Math.abs(arrayOfValues[i]);
+function getClosestToZero() {
+  let temp = Math.abs(arguments[0]), position = 0;
+  for (let i in arguments) {
+    if (Math.abs(arguments[i]) < temp) {
+      temp = Math.abs(arguments[i]);
       position = i;
     }
   }
-  closestToZeroValue = arrayOfValues[position];
-  return closestToZeroValue;
+  return arguments[position];
 }

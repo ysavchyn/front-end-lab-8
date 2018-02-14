@@ -1,8 +1,8 @@
-let getMin = (...arrayOfValues) => {
-  let minValue = arrayOfValues[0];
-  for (let i = 1; i < arrayOfValues.length; i++) {
-    if(arrayOfValues[i] < minValue) {
-      minValue = arrayOfValues[i];
+function getMin() {
+  let minValue = arguments[0];
+  for (let i in arguments) {
+    if(arguments[i] < minValue) {
+      minValue = arguments[i];
     }
   }
   return minValue;
