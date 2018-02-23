@@ -32,42 +32,39 @@ function showResult(fighter) {
 }
 
 function fighter(fighterObj) {
+    let fighterStats = {
+            name: fighterObj.name,
+            attack: fighterObj.attack,
+            hp: fighterObj.hp,
+        },
+        fighterHistory = {
+            wins: 0,
+            loses: 0
+        }
     return {
-        winCounter: 0,
-        loseCounter: 0,
-        name: fighterObj.name,
-        attack: fighterObj.attack,
-        hp: fighterObj.hp,
         getName: function() {
-            return this.name;
+            return fighterStats.name;
         },
         block: function() {
             return Math.random() >= 0.5;
         },
         getStats: function() {
-            return {
-                name: this.name,
-                attack: this.attack,
-                hp: this.hp
-            };
+            return fighterStats;
         },
         getCombatHistory: function() {
-            return {
-                wins: this.winCounter,
-                loses: this.loseCounter
-            };
+            return fighterHistory;
         },
         fight: function(enemy) {
             if (enemy.block()) {
                 return false;
             } else {
-                if (this.attack >= enemy.hp) {
-                    enemy.hp = 0;
-                    enemy.loseCounter++;
-                    this.winCounter++;
+                if (fighterStats.attack >= enemy.getStats().hp) {
+                    enemy.getStats().hp = 0;
+                    enemy.getCombatHistory().loses++;
+                    fighterHistory.wins++;
                     return true;
                 } else {
-                    enemy.hp -= this.attack;
+                    enemy.getStats().hp -= fighterStats.attack;
                     return true;
                 }
             }
