@@ -4,8 +4,7 @@ getTree = (treeArray, node, display = "block") => {
     ul.style.display = display;
     node.appendChild(ul);
     for (let item in treeArray) {
-        let li = document.createElement("li"), a = document.createElement("a"),
-            icon = document.createElement("i"), opened = false;
+        let li = document.createElement("li"), a = document.createElement("a"), icon = document.createElement("i"), opened = false;
         li.setAttribute("id", id);
         ul.appendChild(li);
         a.setAttribute("href", "#");
