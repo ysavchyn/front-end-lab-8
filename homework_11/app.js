@@ -8,7 +8,7 @@ getTree = (treeArray, node, display = "block") => {
         li.setAttribute("id", id);
         ul.appendChild(li);
         a.setAttribute("href", "#");
-        if (treeArray[item].hasOwnProperty("folder")) {
+        if (treeArray[item].hasOwnProperty("children")) {
             icon.setAttribute("class", "material-icons");
             icon.innerHTML = "folder";
             a.onclick = function(e) {
