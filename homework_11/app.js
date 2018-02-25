@@ -51,4 +51,3 @@ getTree = (treeArray, node, display = "block") => {
 }
 rootNode.appendChild(main);
 getTree(structure, main);
-rootNode.appendChild(main);
