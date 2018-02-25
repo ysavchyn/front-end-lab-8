@@ -34,12 +34,11 @@ getTree = (treeArray, node, display = "block") => {
         let newNode = document.getElementById(id);
         id++;
         if ((treeArray[item].children === false || treeArray[item].children === null) && treeArray[item].hasOwnProperty("children")) {
-            let newUl = document.createElement("ul"), newLi = document.createElement("li");
+            let newUl = document.createElement("ul"), newLi = document.createElement("li"), em = document.createElement("em");
             newUl.style.display = display;
             newLi.id = id;
             newNode.appendChild(newUl);
             newUl.appendChild(newLi);
-            em = document.createElement("em");
             newLi.appendChild(em);
             em.innerHTML = "Folder is empty";
             id++;
