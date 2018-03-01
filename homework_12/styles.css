@@ -1,0 +1,84 @@
+html, body {
+     font-family: serif;
+     background-color: #1C1C1E;
+     color: #A19E87;
+}
+ .thumbnails ul {
+     margin: 0;
+     padding: 0;
+     list-style-type: none;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     max-height: 50%;
+}
+ .thumbnails li {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     align-items: center;
+     padding: 0 10px 10px 10px;
+}
+ .thumbnails li:hover {
+     background-color: #2C2C2C;
+     cursor: pointer;
+}
+ .thumbnails img {
+     width: 200px;
+}
+ .thumbnails .imgCountry {
+     max-width: 25px;
+     height: 15px;
+     margin-right: 5px;
+}
+ .thumbnails .infDiv {
+     max-width: 200px;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+}
+ .thumbnails h4 {
+     margin: 0;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+ .thumbnails span {
+     color: #D7D1B7;
+     text-transform: uppercase;
+}
+ .thumbnails-details .contentDiv {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+}
+ .thumbnails-details .thumbnails-details-title {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     align-items: center;
+}
+ .thumbnails-details h1 {
+     text-transform: uppercase;
+}
+ .thumbnails-details h1 span {
+     text-transform: none;
+}
+ .thumbnails-details .back {
+     cursor: pointer;
+}
+ .thumbnails-details .imgCountry {
+     max-width: 40px;
+     height: 20px;
+     margin-right: 10px;
+}
+ .thumbnails-details table, td {
+     border: 1px solid #A19E87;
+     border-collapse: collapse;
+     padding: 10px;
+}
+ .thumbnails-details table {
+     width: 700px;
+}
+ 
